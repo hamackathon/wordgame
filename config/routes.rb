@@ -1,4 +1,5 @@
 Wordgame::Application.routes.draw do
+  get "users/list"
   resources :games
 
   get "home/index"
