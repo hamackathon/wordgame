@@ -1,10 +1,9 @@
 Wordgame::Application.routes.draw do
   get "users/list"
-  resources :games
-
   get "home/index"
+  get "gamefield/index"
+  resources :games
   devise_for :users
-
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
