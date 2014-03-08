@@ -52,3 +52,5 @@ end
 
 gem "jquery-ui-rails"
 gem "pusher"
+gem "nokogiri"
+
