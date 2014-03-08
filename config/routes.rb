@@ -1,6 +1,9 @@
 Wordgame::Application.routes.draw do
+  get "home/index"
   get "gamefield/index"
+  resources :games
   devise_for :users
+  root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -41,7 +44,7 @@ Wordgame::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
