@@ -31,6 +31,7 @@ class GamesController < ApplicationController
 
     respond_to do |format|
       if @game.save
+        27.times { @game.hexes.create } # TODO ダミー
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
         format.json { render action: 'show', status: :created, location: @game }
       else
