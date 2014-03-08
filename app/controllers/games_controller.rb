@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
 
@@ -28,10 +30,19 @@ class GamesController < ApplicationController
   # POST /games.json
   def create
     @game = Game.new(game_params)
+    @game.user1_id = current_user.id
+    @game.status = 'wait'
 
     respond_to do |format|
       if @game.save
-        27.times { @game.hexes.create } # TODO ダミー
+        27.times do |i|
+          hex = @game.hexes.create
+          if i == 13 then
+            hex.word = game_params[:status]
+            hex.user_id = current_user.id
+            hex.save
+          end
+        end # TODO ダミー
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
         format.json { render action: 'show', status: :created, location: @game }
       else
