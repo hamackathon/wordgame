@@ -49,3 +49,6 @@ group :development do
   gem 'better_errors' # Better Errors本体
   gem 'binding_of_caller' # Better Errors上でREPLを使用するためのgem
 end
+
+gem "jquery-ui-rails"
+gem "pusher"
