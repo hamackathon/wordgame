@@ -4,13 +4,14 @@
   #hexagon-wrap-inner
     - @game.hexes.each do |hex|
       #hexagon
-        .hexagon-inner.edit-word
+        .hexagon-inner.edit-word{ data: { word: hex.word, url: game_hex_path(@game, hex) } }
           = hex.word
-          %div{ style: 'display: none;' }
-            .edit-hex-dialog{ title: 'Edit Word' }
-              = form_for [hex.game, hex] do |f|
-                = f.text_field :word
-                = f.submit 'OK'
     %div{ style: 'clear: both;' }
 
 = link_to 'Back', games_path
+
+%div{ style: 'display: none;' }
+  #edit-hex-dialog{ title: 'Edit Word' }
+    = form_for Hex.new, url: '', method: 'PATCH' do |f|
+      = f.text_field :word, value: ''
+      = f.submit 'OK'
