@@ -1,4 +1,6 @@
 Wordgame::Application.routes.draw do
+  resources :games
+
   get "home/index"
   devise_for :users
 
