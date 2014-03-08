@@ -43,5 +43,14 @@ gem "devise"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
 gem "jquery-rails"
-gem "jquery-ui-rails"
 gem "rspec-rails", ">= 2.0.1", group: [:development, :test]
+
+group :development do 
+  gem 'better_errors' # Better Errors本体
+  gem 'binding_of_caller' # Better Errors上でREPLを使用するためのgem
+end
+
+gem "jquery-ui-rails"
+gem "pusher"
+gem "nokogiri"
+
