@@ -1,3 +1,67 @@
 // Place all the styles related to the gamefield controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.clear-both{
+	clear:both;
+}
+
+
+#hexagon-wrap {
+	background: #555;
+}
+#hexagon-wrap-inner {
+	width: 50%;
+	max-width: 800px;
+	margin: auto;
+}
+#hexagon {
+	float: left;
+	position: relative;
+	width: 15%;
+	margin: .8%;
+}
+.hexagon-inner {
+	position: relative;
+	height: 100%;
+}
+.hexagon-inner p {
+	text-align: center;
+	font-size: 54px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	line-height: 0;
+	margin: auto;
+}
+#hexagon .hexagon {
+	background: #1ddce8;
+}
+#hexagon:hover .hexagon {
+	background: #e77979;
+}
+
+@media screen and (max-width:980px) {
+	#hexagon-wrap-inner {
+		width: 500px;
+	}
+	#hexagon {
+		width: 75px;
+		margin: 4px;
+	}
+	.hexagon-inner p {
+		font-size: 24px;
+	}
+}
+@media screen and (max-width:540px) {
+	#hexagon-wrap-inner {
+		width: 250px;
+	}
+	#hexagon {
+		width: 37px;
+		margin: 2px;
+	}
+}

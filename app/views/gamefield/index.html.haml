@@ -1,2 +1,8 @@
 %h1 Gamefield#index
-%p Find me in app/views/gamefield/index.html.haml
+
+#hexagon-wrap
+  #hexagon-wrap-inner
+    - (0...@hex_count).each do |i|
+      #hexagon
+        .hexagon-inner
+    %div{:style => "clear:both;"}
