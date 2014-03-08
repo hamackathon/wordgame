@@ -27,6 +27,5 @@ Wordgame::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  #config/environments/development.rb
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
