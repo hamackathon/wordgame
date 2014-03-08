@@ -1,15 +1,15 @@
-%p#notice= notice
+%h1 Game
 
-%p
-  %b User1:
-  = @game.user1_id
-%p
-  %b User2:
-  = @game.user2_id
-%p
-  %b Status:
-  = @game.status
+#hexagon-wrap
+  #hexagon-wrap-inner
+    - (0...@hex_count).each do |i|
+      #hexagon
+        .hexagon-inner.edit-word
+          %div{ style: 'display: none;' }
+            .edit-hex-dialog{ title: 'Edit Word' }
+              = form_for Hex.new, url: '' do |f|
+                = f.text_field :word
+                = f.submit 'OK'
+    %div{:style => "clear:both;"}
 
-= link_to 'Edit', edit_game_path(@game)
-\|
 = link_to 'Back', games_path
