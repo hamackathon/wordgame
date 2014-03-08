@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery.ui.all
+//= require hexagon
 //= require_tree .

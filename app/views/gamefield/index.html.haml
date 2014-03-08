@@ -4,5 +4,10 @@
   #hexagon-wrap-inner
     - (0...@hex_count).each do |i|
       #hexagon
-        .hexagon-inner
+        .hexagon-inner.edit-word
+          %div{ style: 'display: none;' }
+            .edit-hex-dialog{ title: 'Edit Word' }
+              = form_for Hex.new, url: '' do |f|
+                = f.text_field :word
+                = f.submit 'OK'
     %div{:style => "clear:both;"}
