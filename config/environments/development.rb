@@ -28,4 +28,6 @@ Wordgame::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.secret_key_base = "3417ca78ded7b3a4f5eba48142c84152bb62c6eec16197d9aea26c158297be2addd7aa247183958178aa05aad649fba679805bada7291b958f294f4c37cf2ef2"
 end
