@@ -16,6 +16,7 @@ class GamesController < ApplicationController
 
   # GET /games/new
   def new
+    redirect_to user_session_path unless user_signed_in?
     @game = Game.new
   end
 
