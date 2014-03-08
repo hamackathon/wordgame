@@ -1,6 +1,7 @@
 Wordgame::Application.routes.draw do
-  # get "home/index"
   root :to => "games#new"
+  get "users/list"
+  get "home/index"
   get "gamefield/index"
   resources :games
   devise_for :users
