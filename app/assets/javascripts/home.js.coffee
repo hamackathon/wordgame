@@ -3,4 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   $('.edit-word').click ->
-    $('.edit-hex-dialog', this).dialog({ modal: true })
+    hex = $(this)
+
+    dialog = $('#edit-hex-dialog')
+    $('form', dialog).attr('action', hex.data('url'))
+    $('input[name="hex[word]"]').val(hex.data('word'))
+    dialog.dialog({ modal: true })
