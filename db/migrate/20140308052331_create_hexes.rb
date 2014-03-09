@@ -9,7 +9,7 @@ class CreateHexes < ActiveRecord::Migration
       t.integer :score4
       t.integer :score5
       t.integer :score6
-
+      t.integer :game_id
       t.timestamps
     end
   end
