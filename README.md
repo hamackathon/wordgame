@@ -13,6 +13,7 @@ SEACRET_KEYに何か適当な値を設定してから起動してください。
 例（ubuntu環境）
 
 ./bach_profileに以下を追記
+
 export SEACRET_KEY="9c63df9207b56947ab15c7b2c3362a64c8016abd81e2136901fa55b0edf9c309a2aaec31c42c23b6ea061b03a180cb84d314f373c383f48cb025ab90"
 
 sourceコマンドで反映
