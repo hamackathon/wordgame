@@ -17,7 +17,7 @@ export SEACRET_KEY="9c63df9207b56947ab15c7b2c3362a64c8016abd81e2136901fa55b0edf9
 
 sourceコマンドで反映
 
-$source ~/.bash_profile
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
